@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$data.name} - {:C('SITE_NAME')}</title>
+<include file="Public/header"/>
+
+<!--中间  开始-->
+
+<div id="mnmf000">
+  	<div id="buje" style="padding-bottom:10px;">
+        <div id="buje1">
+          <h3>{$data.name}</h3>
+          <p>{$data.intro}</p>
+    	</div>
+	    <if condition="$data['photo']">
+		    <div id="buje1">
+		        <h3>联盟图片</h3>
+		        <div id="bu_img">
+		        <foreach name="data['photo']" item="v">
+		        	<p><img src="__ROOT__/{$v.thumb}" width="291" height="209" /></p>
+		        </foreach>
+		      </div>
+		    </div>
+	    </if>
+        <div id="buje1">
+            <h3>联系联盟</h3>
+          <div id="jnyt">
+               <p>联系电话：{$data.phone}</p>
+               <p>邮箱：{$data.email}</p>
+               <p>地址：{$data.addr}</p>
+               <p>微信号：{$data.weixin}</p>
+            </div>
+            <div id="jnyt1">
+               <i><img <if condition="$data['thumb']"> src="__ROOT__/{$data.thumb}"<else/> src="__PUBLIC__/Default/images/no_image_350.jpg" style="border:1px solid #fff"</if> width="120" height="120" /></i>
+               <p>{$data.name}</p>
+               <p>扫一扫，关注我们</p>
+               <p>地址：{$data.addr}</p>
+               <p>微信号：{$data.weixin}</p>
+          </div>
+        </div> 
+        <div class="clear1"></div>
+    </div>
+<div class="clear1"></div>
+</div>
+
+
+<!--中间  结束-->
+<!--低陪  开始-->
+<include file="Public/footer"/>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<include file="Public/header"/>
+<!-- page special css plugin here -->
+<include file="Public/nav"/>
+            <section class="main-content">
+                <div class="content-wrap">
+                	<div class="row mg-b">
+                        <div class="col-xs-12">
+                            <section class="panel">
+                                <header class="panel-heading">
+                                    {$titleL1}
+                                </header>
+                                <div class="panel-body no-padding">
+                                    <div class="table-responsive">
+                                        <table id="table" class="table table-striped responsive" data-sortable="" data-sortable-initialized="true">
+                                            <thead>
+                                                <tr>
+                                                    <th width="50%">标题</th>
+                                                    <th>发布时间</th>
+                                                    <th>发布者</th>
+                                                    <th>邮箱</th>
+                                                    <th>状态</th>
+                                                    <th>操作</th>
+                                                    
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            	<foreach name="lists" item="v">
+	                                                <tr>
+                                                        <td>
+                                                            {$v.title}
+                                                        </td>
+                                                        <td>{$v.create_at|date="Y-m-d", ###}</td>
+                                                        <td>{$v.nickname}</td>
+                                                        <td>{$v.email}</td>
+                                                        <td>
+                                                        	<if condition="$v['status'] eq 0">
+                                                        		<a href="javascript:;" data-id="{$v.id}" set="1" class="btn btn-xs btn-danger set-status">未审核</a>
+                                                        	<else/>
+                                                                <a href="javascript:;" data-id="{$v.id}" set="0" class="btn btn-xs btn-success btn-info set-status">以审核</a>
+                                                        	</if>
+                                                        </td>
+	                                                    <td>
+	                                                    	<a class="show-detail" href="javascript:;"  show-url="{:U('MicroCircle/detail', ['id' => $v['id']])}" data-toggle="tooltip" data-placement="top" title="" data-original-title="查看详情"><span class="fa fa-eye text-success"></span></a>&nbsp;
+                                             			  	
+                                             			  	<a class="del" href="{:U('MicroCircle/del', ['id' => $v['id']])}" data-toggle="tooltip" data-placement="top" title="" data-original-title="删除"><span class="fa fa-trash-o text-success"></span></a>
+
+	                                                    </td>
+	                                                </tr>
+                                                </foreach>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </section>
+
+                             <!-- page -->
+                            <section class="panel bg-none">
+                                <div class="page">
+                                    {$page}
+                                </div>
+                                <div style="clear:both;"></div>
+                           </section>
+                            <!-- page-end -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+<!-- page special js plugin here -->
+<include file="Public/footer"/>  
+<script type="text/javascript" src="__PUBLIC__/Plugin/layer/layer.js"></script>
+<script>
+    $('.show-detail').click(function() {
+        var url = $(this).attr('show-url');
+        layer.open({
+            type: 2,
+            title: '预览',
+            shadeClose: true,
+            shade: 0.8,
+            maxmin: true,
+            area: ['70%', '60%'],
+            content: url
+        }); 
+    });
+    $('.set-status').click(function() {
+        var id = $(this).attr('data-id');
+        var set = $(this).attr('set');
+        $.post("{:U('MicroCircle/check')}", {id : id , set : set}, function() {
+            window.location.reload();
+        })
+    });
+</script>
+</body>
+</html>

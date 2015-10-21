@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>同心同声 - {:C('SITE_NAME')}</title>
+<include file="Public/header"/>
+
+<!--中间  开始-->
+
+<div id="mnmf00">
+  <div id="mnmf001">
+       <div id="Timea">
+      <img src="__PUBLIC__/Home/images/3.jpg" width="133" height="50" /> </div>
+      <notempty name="article">
+        <foreach name="article" item="v">  
+          <div class="Timea1">
+           <div class="Timea1_img"><a href="{:U('Article/detail', array('id' => $v['id']))}"><img src="__ROOT__/{$v.thumb}" width="225" height="152" /></a></div>
+           <div class="Timea1_Title">
+               <h3><a href="{:U('Article/detail', array('id' => $v['id']))}">{$v.title}</a></h3>
+               <p class="lli">{$v.create_at|date=Y/m/d, ###}</p>
+               <p>{$v.desc}...<a href="{:U('Article/detail', array('id' => $v['id']))}"> 查看全文 &raquo;</a></p>
+           </div>
+          </div>
+          </foreach>
+      <else/>
+          <h3 style="text-align:center; color:#ccc; padding:100px;">暂无内容</h3>
+      </notempty>
+    
+ <div class="clear1"></div>   
+    <div id="hhgh">
+        {$page}
+    </div>
+    
+  </div>
+  
+<div class="clear1"></div>
+</div>
+
+
+<!--中间  结束-->
+<include file="Public/footer"/>
+</body>
+</html>

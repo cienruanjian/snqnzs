@@ -1,0 +1,148 @@
+</head>
+<body>
+    <div class="app">
+        <header class="header header-fixed navbar">
+            <div class="brand">
+                <a href="javascript:;" class="fa fa-bars off-left visible-xs" data-toggle="off-canvas" data-move="ltr"></a>
+                <a href="{:U('Index/index')}" class="navbar-brand text-white">
+                    <i class="fa fa-stop mg-r-sm"></i>
+                    <span class="heading-font">
+						青年之声<b>管理系统</b>
+					</span>
+                </a>
+            </div>
+            <form class="navbar-form navbar-left hidden-xs" role="search">
+                <div class="form-group">
+                    <button class="btn no-border no-margin bg-none no-pd-l" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <input type="text" class="form-control no-border no-padding search" placeholder="">
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right off-right">
+                <li class="hidden-xs">
+                    <a href="javascript:;">
+						欢迎您，{:session('login')}
+					</a>
+                </li>
+                <li class="notifications dropdown hidden-xs">
+                    <a href="javascript:;" data-toggle="dropdown">
+                        <i class="fa fa-envelope"></i>
+                        <div class="badge badge-top bg-danger animated flash">0</div>
+                    </a>
+                </li>
+                <li class="quickmenu">
+                    <a href="javascript:;" data-toggle="dropdown"  style="font-size:18px;">
+                        <i class="fa fa-user"></i>
+                        <i class="caret mg-l-xs hidden-xs no-margin"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right mg-r-xs">
+                        
+                        <li>
+                            <a href="{:U('My/index')}">修改密码</a>
+                        </li>
+                        <li>
+                            <a href="{:U('Login/logout')}">退出</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </header>
+
+        <section class="layout">
+
+            <aside class="sidebar canvas-left">
+
+                <nav class="main-navigation">
+                    <ul>
+                        <li <eq name="Think.CONTROLLER_NAME|strtolower" value="index">class="active"</eq>>
+                            <a href="{:U('Index/index')}">
+                                <i class="fa fa-coffee"></i>
+                                <span>控制台</span>
+                            </a>
+                        </li>
+
+                         <li <eq name="Think.CONTROLLER_NAME|strtolower" value="admanage">class="active"</eq>>
+                            <a href="{:U('AdManage/index')}">
+                                <i class="fa fa-desktop"></i>
+                                <span>广告管理</span>
+                            </a>
+                        </li>
+
+                        <li <eq name="Think.CONTROLLER_NAME|strtolower" value="acticle">class="active"</eq>>
+                            <a href="{:U('Article/index')}">
+                                <i class="fa fa-file"></i>
+                                <span>文章管理</span>
+                            </a>
+                        </li>
+
+                        <li <eq name="Think.CONTROLLER_NAME|strtolower" value="service">class="active"</eq>>
+                            <a href="{:U('Service/index')}">
+                                <i class="fa fa-dribbble"></i>
+                                <span>服务联盟</span>
+                            </a>
+                        </li>
+
+                        <li <eq name="Think.CONTROLLER_NAME|strtolower" value="microcircle">class="active"</eq>>
+                            <a href="{:U('MicroCircle/index')}">
+                                <i class="fa fa-circle"></i>
+                                <span>思春微圈</span>
+                            </a>
+                        </li>
+
+
+
+
+                        <!-- <li <eq name="Think.CONTROLLER_NAME|strtolower" value="question">class="active"</eq>>
+                            <a href="{:U('Question/index')}">
+                                <i class="fa fa-comments"></i>
+                                <span>问题列表</span>
+                            </a>
+                        </li>
+
+                        <li class="dropdown show-on-hover <if condition="in_array(strtolower(CONTROLLER_NAME), ['service'])">active</if>">
+                            <a href="javascript:;" data-toggle="dropdown">
+                                <i class="fa fa-dribbble"></i>
+                                <span>服务联盟</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="{:U('Service/add')}">
+                                        <span>添加联盟</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{:U('Service/index')}">
+                                        <span>联盟列表</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li <eq name="Think.CONTROLLER_NAME|strtolower" value="category">class="active"</eq>>
+                            <a href="{:U('Category/index')}">
+                                <i class="fa fa-gears"></i>
+                                <span>类别设置</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav> -->
+
+
+                <footer>
+                    <div class="about-app pd-md animated pulse">
+                        <span>
+							<b>{:C('BACKEND_NAME')}</b>&#32;响应式布局。
+						</span>
+                    </div>
+                    <div class="footer-toolbar pull-left">
+                        <a href="javascript:;" class="pull-left help">
+                            <i class="fa fa-question-circle"></i>
+                        </a>
+                        <a href="javascript:;" class="toggle-sidebar pull-right hidden-xs">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    </div>
+                </footer>
+
+            </aside>

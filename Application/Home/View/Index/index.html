@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="wb:webmaster" content="52f14c1aa569ba24" />
+<title>首页 - {:C('SITE_NAME')}</title>
+<link href="__PUBLIC__/Home/css/jswhl.css" type="text/css" rel="stylesheet" />
+<include file="Public/header"/>
+  <!--中间  开始-->
+  <div id="Middle">
+    <div id="Middle_left">
+      <div id="mgny">
+        <img src="__PUBLIC__/Home/images/3.jpg" width="133" height="50" />
+      </div>
+      <div id="mgnt295">
+        <div id="slider">
+          <ul class="pics">
+            <foreach name="ad" item="v">
+              <li><a <if condition="$v['url']">target="_blank" href="{$v.url}"</if>><img src="__ROOT__/{$v.thumb}" /></a></li>
+            </foreach>
+           
+          </ul>
+          <ul id="nav">
+            <foreach name="ad" item="v">
+               <li onmouseover="setTimeout(function(){lanrenzhijia.slider.pos(0)},300)">{$key+1}</li>
+            </foreach>
+           
+          </ul>
+        </div>
+      </div>
+      <div id="mgnt_Title">
+        <div class="h20"></div>
+        <div class="clear1"></div>
+        <foreach name="articles" item="v">
+          <p><a href="{:U('Article/detail', ['id' => $v['id']])}">{$v.title|mb_substr=###, 0, 35, 'utf-8'}</a></p>
+        </foreach> 
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div id="Middle_right">
+      <div id="right_Title">
+        <p>
+          <img src="__PUBLIC__/Home/images/4.jpg" width="130" height="50" />
+        </p>
+        <span><a href="http://sn.gz.qnzs.youth.cn/question/ask/s/0/l/0" target="__blank">更多>></a></span>
+      </div>
+      <div id="Middle_mwpw">
+        <div id="ggrh">
+          <div class="clear1"></div>
+         
+          <foreach name="newestQuestions" item="v">
+          <div class="ggrh1">
+            <if condition="$v['r_a_username'] neq '' ">
+             <h3>{$v.r_a_username}答：{$v.r_q_title}</h3>
+            </if>
+            
+            <p>
+              <img src="__PUBLIC__/Home/images/10.jpg" width="34" height="35" />
+              <span>{$v.r_q_addname}：</span>
+              <if condition="$v['r_q_description']">
+                {$v.r_q_description}
+              <else/>
+                {$v.r_q_title}
+              </if>
+            </p>
+            <if condition="$v['r_a_username']">
+              <p class="geth">
+                <img src="{$v.r_a_avatar}" width="30" height="30" />
+                <span>{$v.r_a_username}</span>：{$v.r_a_content}　<a target="_blank" href="http://sn.gz.qnzs.youth.cn/index/show/id/{$v.r_q_id}">查看全文>></a>
+              </p>
+            </if>
+            
+            <p class="geth1">
+              <a href="#">
+                <img src="__PUBLIC__/Home/images/12.jpg" width="27" height="25" />
+              </a>{$v.r_q_agree}　|　{$v.r_q_added|date="Y-m-d H:i:s", ###}
+            </p>
+          </div>
+          </foreach>
+        </div>
+        <div class="clear1"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div id="ol100">
+      <div class="Middle_lm">
+        <div class="Middle_Tie">
+          <p><a href="#">更多>></a></p>
+          <h3><img src="__PUBLIC__/Home/images/5.jpg" width="132" height="50" /></h3>
+        </div>
+        <div class="Middle_Tie1">
+          <div id="lma">
+            <div class="h20"></div>
+            <foreach name="circles" item="v">
+              <p><a href="{:U('MicroCircle/detail', ['id' => $v['id']])}">{$v.title|mb_substr=###, 0, 16, 'utf-8'}</a></p>
+            </foreach> 
+          </div>
+        </div>
+      </div>
+      <div class="Middle_lm" style="margin-left:15px; margin-right:15px;">
+        <div class="Middle_Tie">
+          <p><a href="#">更多>></a></p>
+          <h3>
+            <img src="__PUBLIC__/Home/images/6.jpg" width="129" height="50" />
+          </h3>
+        </div>
+        <div class="Middle_Tie1">
+          <div id="fnpe">
+            <foreach name="experts" item="v">
+              <div <if condition="$key % 2 eq 0">class="fnpe1"<else/>class="fnpe1 fnpe1-1"</if>>
+                <div class="fnpe1_1">
+                  <img src="{$v.avatar}" width="47" height="45" />
+                </div>
+                <div class="fnpe2">
+                  <h3>{$v.name}</h3>
+                  <p><span>标签：</span>{$v.tags}</p>
+                </div>
+              </div>
+            </foreach>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+      <div class="Middle_lm">
+        <div class="Middle_Tie">
+            <p><a href="#">更多>></a></p>
+            <h3><img src="__PUBLIC__/Home/images/7.jpg" width="134" height="50" /></h3>
+        </div>
+       
+        <div class="Middle_Tie1" id="hot">
+          <foreach name="hotQuestions" item="v">
+            <div class="rvgk">
+              <div class="rvgk1">
+                <img src="{$v.r_q_avatar}" width="49" height="48" />
+              </div>
+              <div class="rvgk2">
+                <h3><a target="_blank" href="http://sn.gz.qnzs.youth.cn/index/show/id/{$v.r_q_id}">{$v.r_q_title}</a></h3>
+                <p>{$v.r_q_description}</p>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </foreach>
+        </div>
+        <div class="clear1"></div>
+      </div>
+      <div class="clear1"></div>
+    </div>
+      <div id="img_1">
+        <img src="__PUBLIC__/Home/images/16.jpg" width="1024" height="81" />
+      </div>
+      <div id="tmfm00">
+        <div id="tmfm">
+         <iframe width="667" height="509"  frameborder="0" scrolling="no" src="http://widget.weibo.com/livestream/listlive.php?language=zh_cn&width=667&height=509&uid=2707274663&skin=1&refer=1&appkey=2537213708&pic=0&titlebar=1&border=1&publish=1&atalk=1&recomm=0&at=0&atopic=%E9%9D%92%E5%B9%B4%E4%B9%8B%E5%A3%B0%C2%B7%E6%80%9D%E5%8D%97&ptopic=%E9%9D%92%E5%B9%B4%E4%B9%8B%E5%A3%B0%C2%B7%E6%80%9D%E5%8D%97&dpc=1"></iframe>
+        </div>
+        <div id="tmfm1">
+          <div class="tmfm-on">
+            <img src="__PUBLIC__/Home/images/erweima.jpg" alt="" />
+          </div>
+          <div class="tmfm-in">
+            <a href="http://www.sinan.gov.cn/?Temp=Sinanbmindex&GID=000100030045" target="_blank">
+              <img src="__PUBLIC__/Home/images/siqingjiayuan.jpg" alt="" />
+            </a>
+          </div>
+          <div class="clear1"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <!--低陪  开始-->
+  <include file="Public/footer"/>
+  <!--低陪  结束-->
+  <script src="__PUBLIC__/Home/js/min.js"></script>
+  <script src="__PUBLIC__/Admin/vendor/jquery-1.11.1.min.js"></script>
+  <script>
+    lanrenzhijia.slider.init('slider',{
+      auto:3,
+      vertical:1,
+      navId:'nav',
+      curClass:'nav',
+      index:0
+    });
+
+    //滚动
+    setInterval("move()", 3000);
+    function move() {
+      var oDiv = $('.ggrh1:eq(0)');
+      oDiv.clone().appendTo('#ggrh');
+      oDiv.fadeOut('slow', function() {
+        $(this).remove();
+      });
+    }
+
+    setInterval("move2()", 3000);
+    function move2() {
+      var oDiv = $('.rvgk:eq(0)');
+      oDiv.clone().appendTo('#hot');
+      oDiv.fadeOut('slow', function() {
+        $(this).remove();
+      });
+    }
+  </script>
+</body>
+</html>

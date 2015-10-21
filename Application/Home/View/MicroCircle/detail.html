@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$data.title} - {:C('SITE_NAME')}</title>
+<include file="Public/header"/>
+<!--中间  开始-->
+
+<div id="mnmf00">
+  <div id="mnmf001">
+       <div id="Timea" style="height:73px;"><p>{$data.title}</p></div>
+       <div id="tgk">
+          <p>{$data.nickname|default="匿名"} &nbsp;&nbsp;&nbsp;发布时间 {$data.create_at|date="Y/m/d", ###}&nbsp;&nbsp;&nbsp;点击数：{$data.click}</p>
+       </div>
+    <div id="geuj">
+    <div class="clear1"></div>
+        <div id="mwpw123">
+          {$data.content}
+        </div>
+        <div id="gaga">
+           
+        </div>
+        
+        
+        <div id="gaga1">
+          <form action="{:U('MicroCircle/comment')}" method="post">
+          <table style="100%" border="0" cellspacing="0">
+            <tr>
+              <td colspan="4"><h3>参与评论</h3></td>
+            </tr>
+            <tr>
+              <td height="14" colspan="4"><div id="xg"></div></td>
+            </tr>
+            <tr>
+              <td  colspan="4" height="48">昵称： <input name="nickname" type="text" class="mmn2"></td>
+              
+            </tr>
+
+            <tr>
+              <td height="124" colspan="4">
+               <textarea class="mmn3" name="content" cols="" rows=""></textarea>
+              </td>
+            </tr>
+
+          <tr>
+            <td colspan="4" align="right">
+                <input name="" type="submit" value="发表" class="mmn4">
+            </td>
+          </tr>
+            
+          <notempty name="data['comments']">
+          <foreach name="data['comments']" item="v">
+            <tr>
+              <td height="24" colspan="4"><div id="xg"></div></td>
+            </tr>
+
+            <tr>
+              <td height="49" colspan="3">{$v.content}！</td>
+              <td width="8%">&nbsp;</td>
+            </tr>
+            <tr>
+              <td height="56" colspan="4"><div align="right"><span>{$v.nickname|default="匿名"} 发表于：{$v.create_at|date="Y-m-d", ###}</span></div></td>
+            </tr>
+          </foreach>
+          <else/>
+            <tr>
+              <td height="24" colspan="4"><div id="xg"></div></td>
+            </tr>
+
+            <tr>
+              <td height="49" colspan="4" style="color:#999;">暂无评论~</td>
+            </tr>
+          </notempty>
+          </table>
+          <input type="hidden" name="comment_for" value="{$data.id}" />
+          </form>
+      </div>
+    </div>
+  </div>
+  
+<div class="clear1"></div>
+</div>
+<!--中间  结束-->
+<include file="Public/footer"/>
+<script src="__PUBLIC__/Admin/vendor/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Plugin/layer/layer.js"></script>
+
+<script type="text/javascript">
+  $('form').submit(function() {
+    var _this = $(this);
+    if ($('textarea[name=content]').val() == "") {
+      layer.msg('请输入内容~');
+      return false;
+    }
+    $.ajax({
+      url        : _this.attr('action'),
+      method     : "post",
+      data       : _this.serialize(),
+      dataType   : 'json',
+      beforeSend : function() {
+        layer.load(1);
+      },
+      success    : function(data) {
+        layer.closeAll('loading');
+        var data = eval(data);
+        if (data.status) {
+          layer.msg(data.msg, function() {
+            window.location.reload();
+          });
+        } else {
+          layer.msg(data.msg);
+        }
+      }
+    });
+    return false;
+  });
+</script>
+</body>
+</html>

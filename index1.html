@@ -1,0 +1,193 @@
+<include file="Public/top"/>
+	<title>贵州青年之声</title>
+	<link rel="stylesheet" href="__PUBLIC__/Home/css/index.css" type="text/css">
+	<include file="Public/nav"/>
+	<include file="Public/serviceUnion"/>
+		<div id="pagebody">
+			<div id="sidebar">
+				<div class="sidebar-on">
+					<div class="on-lef">
+						<!-- 代码 开始 -->
+							<div id="fsD1" class="focus">
+							    <div id="D1pic1" class="fPic">
+							    	<foreach name="ads" item="v">
+								        <div class="fcon" style="display: none;">
+								            <a target="_blank" href="{$v.url}"><img src="__ROOT__/{$v.big_thumb}" style="opacity: 1; "></a>
+								            <span class="shadow"><a target="_blank" href="{$v.url}">{$v.desc}</a></span>
+								        </div>
+							        </foreach>
+
+							    </div>
+							    <div class="fbg">
+							    <div class="D1fBt" id="D1fBt">
+							    	<foreach name="ads" item="v">
+							        	<a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>{$key+1}</i></a>
+							        </foreach>
+
+							    </div>
+							    </div>
+							    <span class="prev"></span>
+							    <span class="next"></span>
+							</div>
+						<!-- 代码 结束  -->
+					</div><!-- 焦点图 -->
+					<div class="on-rig">
+						<div class="onrig-on">
+							<p><a href="{:U('Article/index', ['id' => 2])}">更多&gt;&gt;</a></p>
+						</div>
+						<div class="onrig-in">
+							<ul>
+								<foreach name="reference" item="v">
+									<li><a href="{:U('Article/detail', ['id' => $v['id']])}">{$v.title}</a></li>
+								</foreach>
+							</ul>
+						</div><!-- 青参考 -->
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="saizi"></div>
+				<div class="sidebar-in">
+					<div class="in-lef">
+						<div class="inlef-on">
+							<div class="lefon-lef">
+								<a href="javascript:;" style="display:block;width:100%;height:100%"></a>
+							</div>
+							<div class="lefon-rig">
+								<a href="http://gz.qnzs.youth.cn/question/ask" target="_blank" style="display:block;width:100%;height:100%"></a>
+							</div><!-- 背景图 -->
+							<div class="clear"></div>
+						</div>
+						<div class="inlef-in">
+							<ul>
+								<foreach name="questions" item="v">
+									<li>
+										<div class="sidbox">
+											<if condition="$v['r_a_username']">
+												<div class="biaoti">
+													<p>
+														<a href="javascript:;">{$v.r_a_username}答：{$v.r_q_title}</a>
+													</p>
+												</div>
+											</if>
+											<div class="tiwen">
+												<i>
+												<img src="__PUBLIC__/Home/images/wen.jpg" width="30" height="30" style="position:absolute; top:0px;left:-5px;">
+												</i>
+												<p><font size="14" color="#3a80ff">{$v.r_q_addname}：</font>{$v.r_q_title}</p>
+											</div>
+											<if condition="$v['r_a_username']">
+												<div class="huida">
+													<i>
+														<img src="__PUBLIC__/Home/images/da.jpg" width="30" height="30" style="position:absolute; top:0px;left:-5px;">
+													</i>
+													<p><font size="14" color="#e84992">{$v.r_a_username}：</font>{$v.r_a_content}<a href="http://gz.qnzs.youth.cn/index/show/id/{$v.r_q_id}" target="_blank">查看全文&gt;&gt;</a></p>
+												</div>
+												<div class="shijian">
+													<span class="tw_peo2">
+														回答时间：{$v.r_a_added|date="Y-m-d H:i:s", ###}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+														<a href="javascript:;">
+															<img src="__PUBLIC__/Home/images/dzan.jpg" alt="">
+														</a>
+														<span id="s1990345">{$v.r_a_agree}</span>
+													</span>
+													<div class="clear"></div>
+												</div>
+											</if>
+										</div>
+									</li>
+								</foreach>
+							</ul>
+						</div>
+						<div class="clear"></div>
+					</div><!-- 回音谷 -->
+					<div class="in-rig">
+						<div class="inrig-on"></div><!-- 背景图 -->
+						<div class="inrig-in">
+							<iframe width="370" height="732"  frameborder="0" scrolling="no" src="http://widget.weibo.com/livestream/listlive.php?language=zh_cn&width=370&height=732&uid=2707274307&skin=1&refer=1&appkey=2180032929&pic=0&titlebar=1&border=1&publish=1&atalk=1&recomm=0&at=0&listid=3885207268484747&atopic=%E8%B4%B5%E5%B7%9E%E9%9D%92%E5%B9%B4%E4%B9%8B%E5%A3%B0&ptopic=%E8%B4%B5%E5%B7%9E%E9%9D%92%E5%B9%B4%E4%B9%8B%E5%A3%B0&dpc=1"></iframe>
+						</div>
+						<div class="clear"></div>
+					</div><!-- 微博 -->
+				</div>
+				<div class="saizi"></div>
+
+				<div class="sidebar-duer">
+					<div class="duer-lef">
+						<div class="duerlef-on"></div><!-- 背景图 -->
+
+						<div class="duerlef-in">
+							<foreach name="act" item="v">
+								<div class="lefin-lef" style="margin-right:12px;">
+									<div class="lef-img">
+										<a href="{:U('Article/detail', ['id' => $v['id']])}">
+											<img height="178" width="268" <if condition="$v['face268']">src="__ROOT__/{$v.face268}"<else/>src="__PUBLIC__/Default/images/no_image.jpg"</if>>
+										</a>
+									</div>
+									<div class="lef-duan">
+										<p>{$v.title}</p>
+									</div>
+								</div>
+							</foreach>
+						</div>
+					</div>
+					<div class="duer-rig">
+						<div class="duerrig-on"></div><!-- 背景图 -->
+						<div class="duerrig-in">
+							<div class="in-img">
+								<div class="erw">
+									<div class="erw-img">
+										<img src="__PUBLIC__/Home/images/erw_01.jpg" width="100%" alt="">
+									</div>
+									<div class="erw-weiz">
+										<p>青春黔言微信</p>
+									</div>
+								</div>
+								<div class="erw erwm">
+									<div class="erw-img">
+										<img src="__PUBLIC__/Home/images/erw_02.jpg" width="100%" alt="">
+									</div>
+									<div class="erw-weiz">
+										<p>贵州省团委微博</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- 页面主体 -->
+		</div>
+		<include file="Public/footer" />
+	</div>
+	<a href="http://tuanshengwei.mikecrm.com/f.php?t=10T5eh" style="position:fixed;z-index:999;right:0;bottom: 20px;display: inline-block;width: 300px;height:150px;"><img src="__PUBLIC__/Home/images/diaocha.jpg"></a>
+
+<script type="text/javascript" src="__PUBLIC__/Home/js/koala.min.1.5.js"></script>
+<script type="text/javascript">
+	Qfast.add('widgets', { path: "__PUBLIC__/Home/js/terminator2.2.min.js", type: "js", requires: ['fx'] });
+	Qfast(false, 'widgets', function () {
+		K.tabs({
+			id: 'fsD1',   //焦点图包裹id
+			conId: "D1pic1",  //** 大图域包裹id
+			tabId:"D1fBt",
+			tabTn:"a",
+			conCn: '.fcon', //** 大图域配置class
+			auto: 1,   //自动播放 1或0
+			effect: 'fade',   //效果配置
+			eType: 'click', //** 鼠标事件
+			pageBt:true,//是否有按钮切换页码
+			bns: ['.prev', '.next'],//** 前后按钮配置class
+			interval: 3000  //** 停顿时间
+		})
+	});
+	//滚动
+	setInterval("move()", 5000);
+	function move() {
+		var oLi = $('.inlef-in ul li:eq(0)');
+		oLi.clone().appendTo('.inlef-in ul');
+		oLi.fadeOut('slow', function() {
+			$(this).remove();
+		});
+	}
+	
+
+</script>
+</body>
+</html>

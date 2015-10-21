@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>详细页 - {:C('SITE_NAME')}</title>
+<include file="Public/header"/>
+<!--中间  开始-->
+
+<div id="mnmf00">
+  <div id="mnmf001">
+       <div id="Timea" style="height:73px;"><p>{$article.title}</p></div>
+       <div id="tgk">
+          <p>编辑：{$article.editor}&nbsp;&nbsp;&nbsp; 发布时间 {$article.create_at|date="Y/m/d", ###}&nbsp;&nbsp;&nbsp;
+			点击数：{$article.click}&nbsp;&nbsp;&nbsp;来源：{$data.from|default="青年之声.思念"}
+          </p>
+       </div>
+    <div id="geuj">
+    <div class="clear1"></div>
+        <div id="mwpw123" style="min-height:500px;">
+			{$article.content}
+        </div>
+    </div>
+</div>
+  
+<div class="clear1"></div>
+</div>
+<!--中间  结束-->
+<include file="Public/footer"/>
+</body>
+</html>

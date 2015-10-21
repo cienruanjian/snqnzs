@@ -1,0 +1,74 @@
+<include file="Public/header"/>
+<!-- page special css plugin here -->
+<style>
+	#table  td {
+	 	 vertical-align:middle;
+	}
+</style>
+<include file="Public/nav"/>
+            <section class="main-content">
+
+                <header class="header navbar bg-default">
+                    <ul class="nav navbar-nav">
+                        <li <if condition="$_GET['number'] eq 1 || !$_GET['number']">class="active"</if>>
+                            <a href="{:U('AdManage/index', array('number' => 1))}">首页广告位</a>
+                        </li>
+                    </ul>
+                </header>
+
+                <div class="content-wrap">
+                	<div class="row mg-b">
+                        <div class="col-xs-12">
+                            <section class="panel">
+                                <header class="panel-heading">
+                                	<a class="btn btn-success btn-xs" href="{:U('AdManage/add', ['number' => $_GET['number']])}">添加广告</a>
+                                </header>
+                                <div class="panel-body no-padding">
+                                    <div class="table-responsive">
+                                        <table id="table" class="table table-striped responsive" data-sortable="" data-sortable-initialized="true">
+                                            <thead>
+                                                <tr>
+                                                    <th>缩略图</th>
+                                                    <th>链接地址</th>
+                                                    <th>描述</th>
+                                                    <th>排序</th>
+                                                    <th>操作</th>
+                                                </tr>
+                                            </thead>
+                                            
+                                            <tbody>
+                                                <notempty name="ad">    
+                                                	<foreach name="ad" item="v">
+    	                                                <tr>
+                                                            <td>
+                                                                <img src="__ROOT__/{$v.thumb}" width="140" height="90">
+                                                            </td>
+                                                            <td>{$v.url}</td>
+    	                                                    <td>{$v.desc}</td>
+    	                                                    <td>{$v.sort}</td>
+    	                                                    <td>
+    	                                                    	<a href="{:U('AdManage/edit', array(number => $v['number'],'id' => $v['id']))}" data-toggle="tooltip" data-placement="top" title="" data-original-title="编辑"><span class="fa fa-edit text-success"></span></a>&nbsp;
+                                                 			  	<a class="del" href="{:U('AdManage/del', array(number => $v['number'],'id' => $v['id']))}" data-toggle="tooltip" data-placement="top" title="" data-original-title="删除"><span class="fa fa-trash-o text-success"></span></a>
+    	                                                    </td>
+    	                                                </tr>
+                                                    </foreach>
+                                                <else/>
+                                                    <tr><td colspan="5" align="center" ><br><h4 style="color:#999;">暂时没有内容~</h4></td></tr>
+                                                </notempty>
+                                            </tbody>
+                                            
+                                        </table>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+<!-- page special js plugin here -->
+<include file="Public/footer"/>  
+</body>
+
+</html>

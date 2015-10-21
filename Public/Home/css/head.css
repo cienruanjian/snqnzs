@@ -1,0 +1,134 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0px;
+	padding:0px;
+}
+input:focus, textarea:focus {
+	outline: none;
+}
+body{
+	font-family: "微软雅黑";
+}
+img{
+	margin:0px;
+	border-style:none;
+}
+li{
+	list-style-type:none;
+}
+#head_top {
+	width: 100%;
+	background-image: url(../images/top.jpg);
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+#logo {
+	float: left;
+	width: 225px;
+}
+#new1 {
+	float: left;
+	width: 640px;
+}
+
+
+#head_top1 {
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	height: 88px;
+}
+#iymm {
+	float: right;
+	width: 118px;
+}
+#iymm {
+	background-image: url(../images/uxj.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 88px;
+	line-height: 88px;
+	width: 135px;
+	text-align: center;
+}
+#iymm a {
+	font-size: 18px;
+	color: #FFF;
+	text-decoration: none;
+}
+
+
+
+#new1 ul li {
+	font-size: 18px;
+	float: left;
+	padding-right: 20px;
+	padding-left: 20px;
+	line-height: 88px;
+}
+#new1 ul li a {
+	color: #FFF;
+	text-decoration: none;
+}
+#head_top2 {
+	height: 530px;
+	width: 100%;
+	background-image: url(../images/1.jpg);
+	background-repeat: repeat;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+#head_new {
+	background-image: url(../images/2.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 67px;
+	width: 100%;
+}
+#head_new1 {
+	height: 67px;
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#head_new1 ul li {
+	font-size: 16px;
+	line-height: 67px;
+	padding-right: 14px;
+	padding-left: 15px;
+	float: left;
+}
+#head_new1 ul li a {
+	color: #FFF;
+	text-decoration: none;
+}
+.h40{
+	height: 40px;
+	
+}
+.h20{
+	height: 20px;
+	
+}
+.clear1{
+	clear: both;
+}#foot {
+	width: 100%;
+	background-color: #1a8ed7;
+	height: 165px;
+	margin-top: 50px;
+}
+#foot1 p {
+	font-size: 14px;
+	color: #FFF;
+	text-align: center;
+	line-height: 30px;
+}
+#foot1 {
+	width: 100%;
+	float:left;
+	margin-top: 65px;
+	margin-right: auto;
+	margin-left: auto;
+}

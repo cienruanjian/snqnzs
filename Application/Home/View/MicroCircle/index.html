@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>思青微圈 - {:C('SITE_NAME')}</title>
+<include file="Public/header"/>
+<!--中间  开始-->
+
+<div id="mnmf00">
+  <div id="mnmf001">
+  <div id="Timea"><i><img src="__PUBLIC__/Home/images/5.jpg" width="132" height="50" /></i><p><a href="{:U('MicroCircle/publish')}"><img src="__PUBLIC__/Home/images/26.jpg" width="159" height="43" /></a></p>
+    </div>
+      <div id="qsvg">
+        <div id="qsvg1">
+         <ul>
+            <foreach name="lists" item="v">
+              <li><p><a href="{:U('MicroCircle/detail', array('id' => $v['id']))}">{$v.title|mb_substr=###, 0, 50, 'utf-8'}...</a></p><span>{$v.create_at|date="Y-m-d", ###}</span></li>
+              <if condition="(($key + 1) % 5) eq 0 && $key gt 0">
+                 <div class="border"></div>
+              </if>
+            </foreach>
+         </ul>
+       </div>
+       
+      <div class="clear1"></div>   
+      <div id="hhgh">
+          {$page}
+      </div>
+    
+      </div>
+      
+  </div>
+  
+<div class="clear1"></div>
+</div>
+
+
+<!--中间  结束-->
+<include file="Public/footer"/>
+</body>
+</html>

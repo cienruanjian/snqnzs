@@ -1,0 +1,21 @@
+<include file="Public/header"/>
+<!-- page special css plugin here -->
+<include file="Public/nav"/>
+            <section class="main-content">
+                <div class="content-wrap">
+                    <div class="center-wrapper text-center">
+                        <div class="center-content">
+                            <h2>欢迎使用{:C('BACKEND_NAME')}~</h2>
+                            <h4>上次登录时间：{:date('Y-m-d H:i:s', $_SESSION['admin']['last_login_time'])}</h4>
+                            <h6>上次登录IP：{:long2ip($_SESSION['admin']['last_login_ip'])}</h6>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+<!-- page special js plugin here -->
+<include file="Public/footer"/>  
+</body>
+
+</html>

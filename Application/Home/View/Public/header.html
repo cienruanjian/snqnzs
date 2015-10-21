@@ -1,0 +1,42 @@
+<link href="__PUBLIC__/Home/css/head.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/Home/css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!--头陪  开始-->
+<div id="head_top">
+    <div id="head_top1">
+        <div id="logo"><a href="/"><img src="__PUBLIC__/Home/images/logo.png" width="224" height="86" /></a></div>
+        
+        <div id="new1">
+            <ul>
+                <li><a href="/">首页</a></li>
+                <li><a href="{:U('Article/index')}">同心同声</a></li>
+                <li><a href="{:U('MicroCircle/index')}">思青微圈</a></li>
+                <li><a href="http://sn.gz.qnzs.youth.cn/question/ask/s/0/l/0" target="_blank">我要提问</a></li>
+                <li><a href="http://sn.gz.qnzs.youth.cn/index/list/s/0/l/0" target="_blank">热点问题</a></li>
+                <li><a href="http://sn.gz.qnzs.youth.cn/search/expert/s/0/l/0" target="_blank">专家推荐</a></li>
+               
+            </ul>
+      </div>
+      
+      <div id="iymm">
+         <a href="http://sns.qnzs.youth.cn/user/login/" target="_blank">注册</a>
+         <a href="http://sns.qnzs.youth.cn/user/login/" target="_blank">登录</a>
+      </div>
+    </div>
+    <div id="head_top2">
+    
+    </div>
+    <div id="head_new">
+        <div id="head_new1">
+            <ul>
+                <foreach name="serviceList" item="v">
+                    <li><a href="{:U('Service/index', array('id' => $v['id']))}">{$v.name}</a></li>
+                </foreach>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--头陪  结束-->
+<div class="clear1"></div>
+<div class="h40"></div> 

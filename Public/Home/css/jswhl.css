@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+#slider{
+	overflow: hidden;
+	width: 520px;
+	height: 295px;
+	position: relative;
+
+	margin-right: auto;
+	
+	margin-left: auto;
+}
+#slider .pics{width:530px;height:295px}
+.pics li img {
+	height: 295px;
+	width: 520px;
+}
+#slider .pics li{height:295px;width:530px;float:left}
+#slider #nav {position:absolute;bottom:5px;right:5px;}
+#slider #nav li.nav{background:#F47500; color:#fff;}
+#slider #nav li{border:1px solid #f47500; color:#d94b01; cursor:pointer;background:#fff;font-size:12px; height:15px;width:15px;float:left;margin-left:4px; line-height: 16px;display:inline;text-align:center}
+#Middle_Tie h3 img {
+	float: left;
+}
