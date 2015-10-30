@@ -118,7 +118,7 @@
                         <li <?php if((strtolower(CONTROLLER_NAME)) == "microcircle"): ?>class="active"<?php endif; ?>>
                             <a href="<?php echo U('MicroCircle/index');?>">
                                 <i class="fa fa-circle"></i>
-                                <span>思春微圈</span>
+                                <span>思青微圈</span>
                             </a>
                         </li>
 

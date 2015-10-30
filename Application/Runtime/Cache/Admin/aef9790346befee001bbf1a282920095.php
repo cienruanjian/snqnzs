@@ -30,6 +30,17 @@
 
     <script src="/Public/Admin/vendor/modernizr.js"></script>
 <!-- page special css plugin here -->
+<link rel="stylesheet" href="/Public/Plugin/uploadify/uploadify.css">
+<style type="text/css">
+	.uploadify-button {
+	    background-color: transparent;
+	    border: none;
+	    padding: 0;
+	}
+	.uploadify:hover .uploadify-button {
+	    background-color: transparent;
+	}
+</style>
 </head>
 <body>
     <div class="app">
@@ -178,71 +189,64 @@
                 </footer>
 
             </aside>
-            <section class="main-content">
-                <div class="content-wrap">
-                	<div class="row mg-b">
-                        <div class="col-xs-12">
-                            <section class="panel">
-                                <header class="panel-heading">
-                                    <?php echo ($titleL1); ?>
-                                </header>
-                                <div class="panel-body no-padding">
-                                    <div class="table-responsive">
-                                        <table id="table" class="table table-striped responsive" data-sortable="" data-sortable-initialized="true">
-                                            <thead>
-                                                <tr>
-                                                    <th>标题</th>
-                                                    <th>发布时间</th>
-                                                    <th>发布者</th>
-                                                    <th>邮箱</th>
-                                                    <th>状态</th>
-                                                    <th>操作</th>
-                                                    
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                            	<?php if(is_array($lists)): foreach($lists as $key=>$v): ?><tr>
-                                                        <td>
-                                                            <?php echo ($v["title"]); ?>
-                                                        </td>
-                                                        <td><?php echo (date("Y-m-d", $v["create_at"])); ?></td>
-                                                        <td><?php echo ($v["nickname"]); ?></td>
-                                                        <td><?php echo ($v["email"]); ?></td>
-                                                        <td>
-                                                        	<?php if($v['status'] == 0): ?><a href="javascript:;" data-id="<?php echo ($v["id"]); ?>" set="1" class="btn btn-xs btn-danger set-status">未审核</a>
-                                                        	<?php else: ?>
-                                                                <a href="javascript:;" data-id="<?php echo ($v["id"]); ?>" set="0" class="btn btn-xs btn-success btn-info set-status">已审核</a><?php endif; ?>
-                                                        </td>
-	                                                    <td>
-	                                                    	<a class="show-detail" href="javascript:;"  show-url="<?php echo U('MicroCircle/detail', ['id' => $v['id']]);?>" data-toggle="tooltip" data-placement="top" title="" data-original-title="查看详情"><span class="fa fa-eye text-success"></span></a>&nbsp;
+        <section class="main-content">
+            <div class="content-wrap">
+                <div class="row">
+                	<div class="col-lg-12">
+                 	<section class="panel">
+                      <header class="panel-heading"><?php echo ($titleL2); ?></header>
+                      <div class="panel-body">
+                          <form class="form-horizontal bordered-group" role="form" action="<?php echo U('Article/editHandle');?>" method="post">
+                              <div class="form-group">
+                                  <label for="inputEmail3" class="col-sm-2 control-label"><span class="red">* </span>标题</label>
+                                  <div class="col-sm-8">
+                                      <input type="text" name="title" placeholder="文章标题" value="<?php echo ($data["title"]); ?>" class="form-control" id="inputEmail3">
+                                  </div>
+                              </div>
+                              
+                               <div class="form-group">
+                                  <label class="col-sm-2 control-label"><span class="red">* </span>内容</label>
+                                  <div class="col-sm-8">
+                                      <textarea name="content"  id="ue-content"><?php echo ($data["content"]); ?></textarea>
+                                  </div>
+                              </div> 
+                             
+                              <div class="form-group">
+                                  <label for="inputEmail5" class="col-sm-2 control-label">发布者</label>
+                                  <div class="col-sm-4">
+                                      <input type="text" class="form-control" value="<?php echo ($data["nickname"]); ?>" name="nickname" id="inputEmail5" >
+                                  </div>
+                              </div>
 
-                                                            <a  href="<?php echo U('MicroCircle/edit', ['id' => $v['id']]);?>" data-toggle="tooltip" data-placement="top" title="" data-original-title="编辑"><span class="fa fa-edit text-success"></span></a>&nbsp;
-                                             			  	
-                                             			  	<a class="del" href="<?php echo U('MicroCircle/del', ['id' => $v['id']]);?>" data-toggle="tooltip" data-placement="top" title="" data-original-title="删除"><span class="fa fa-trash-o text-success"></span></a>
-
-	                                                    </td>
-	                                                </tr><?php endforeach; endif; ?>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </section>
-
-                             <!-- page -->
-                            <section class="panel bg-none">
-                                <div class="page">
-                                    <?php echo ($page); ?>
-                                </div>
-                                <div style="clear:both;"></div>
-                           </section>
-                            <!-- page-end -->
-                        </div>
-                    </div>
+                              <div class="form-group">
+                                  <label class="col-sm-2 control-label">发布时间</label>
+                                  <div class="col-sm-4">
+                                      <div class="input-group mg-b-md input-append date datepicker" data-date="<?php echo date('Y-m-d');?>" data-date-format="yyyy-mm-dd">
+                                          <input type="text" name="create_at" value="<?php echo (date('Y-m-d', $data["create_at"])); ?>" class="form-control">
+                                          <span class="input-group-btn">
+                                          <button class="btn btn-white add-on" type="button">
+                                          <i class="fa fa-calendar"></i>
+                                          </button>
+                                          </span>
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                              <input type="hidden" name="id" value="<?php echo ($data["id"]); ?>">
+                              <div class="form-group">
+                                  <div class="col-sm-offset-2 col-sm-6">
+                                      <button type="submit" class="btn btn-success">保存</button>
+                                      <button type="button" class="btn btn-default" onclick="history.go(-1)">返回</button>
+                              </div>
+                          </form>
+                      </div>
+                  </section>
+                 </div>
                 </div>
-            </section>
+            </div>
         </section>
-    </div>
-<!-- page special js plugin here -->
+    </section>
+</div>
 <script src="/Public/Admin/vendor/jquery-1.11.1.min.js"></script>
 <script src="/Public/Admin/bootstrap/js/bootstrap.js"></script>
 <script src="/Public/Admin/vendor/jquery.easing.min.js"></script>
@@ -260,28 +264,30 @@
 <script src="/Public/Admin/vendor/isotope/isotope.pkgd.min.js"></script>
 <script src="/Public/Admin/js/feed.js"></script>
 
-<script src="/Public/Admin/js/common.js"></script>  
+<script src="/Public/Admin/js/common.js"></script> 
+<!-- page special js plugin here -->
+<script type="text/javascript" charset="utf-8" src="/Public/Plugin/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/Public/Plugin/ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="/Public/Plugin/ueditor/lang/zh-cn/zh-cn.js"></script>
 <script type="text/javascript" src="/Public/Plugin/layer/layer.js"></script>
+<script src="/Public/Admin/vendor/bootstrap-datepicker/bootstrap-datepicker.js"></script>
 <script>
-    $('.show-detail').click(function() {
-        var url = $(this).attr('show-url');
-        layer.open({
-            type: 2,
-            title: '预览',
-            shadeClose: true,
-            shade: 0.8,
-            maxmin: true,
-            area: ['70%', '60%'],
-            content: url
-        }); 
-    });
-    $('.set-status').click(function() {
-        var id = $(this).attr('data-id');
-        var set = $(this).attr('set');
-        $.post("<?php echo U('MicroCircle/check');?>", {id : id , set : set}, function() {
-            window.location.reload();
-        })
-    });
+
+  $('form').submit(function () {
+    if ($('input[name=title]').val() == '') {
+      layer.msg('标题不能为空');
+      return false;
+    }
+    if ($('textarea[name=content]').val() == '') {
+      layer.msg('内容不能为空');
+      return false;
+    }
+  });
+   $('.datepicker').datepicker();
+</script>
+<script type="text/javascript">
+	//实例化编辑器
+	UE.getEditor('ue-content');
 </script>
 </body>
 </html>

@@ -14,7 +14,7 @@
                                         <table id="table" class="table table-striped responsive" data-sortable="" data-sortable-initialized="true">
                                             <thead>
                                                 <tr>
-                                                    <th width="50%">标题</th>
+                                                    <th>标题</th>
                                                     <th>发布时间</th>
                                                     <th>发布者</th>
                                                     <th>邮箱</th>
@@ -36,11 +36,13 @@
                                                         	<if condition="$v['status'] eq 0">
                                                         		<a href="javascript:;" data-id="{$v.id}" set="1" class="btn btn-xs btn-danger set-status">未审核</a>
                                                         	<else/>
-                                                                <a href="javascript:;" data-id="{$v.id}" set="0" class="btn btn-xs btn-success btn-info set-status">以审核</a>
+                                                                <a href="javascript:;" data-id="{$v.id}" set="0" class="btn btn-xs btn-success btn-info set-status">已审核</a>
                                                         	</if>
                                                         </td>
 	                                                    <td>
 	                                                    	<a class="show-detail" href="javascript:;"  show-url="{:U('MicroCircle/detail', ['id' => $v['id']])}" data-toggle="tooltip" data-placement="top" title="" data-original-title="查看详情"><span class="fa fa-eye text-success"></span></a>&nbsp;
+
+                                                            <a  href="{:U('MicroCircle/edit', ['id' => $v['id']])}" data-toggle="tooltip" data-placement="top" title="" data-original-title="编辑"><span class="fa fa-edit text-success"></span></a>&nbsp;
                                              			  	
                                              			  	<a class="del" href="{:U('MicroCircle/del', ['id' => $v['id']])}" data-toggle="tooltip" data-placement="top" title="" data-original-title="删除"><span class="fa fa-trash-o text-success"></span></a>
 

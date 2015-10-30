@@ -3,13 +3,13 @@
 namespace Admin\Controller;
 use Think\Page;
 /**
- * 思春微圈
+ * 思青微圈
  * @author yuwei
  */
 class MicroCircleController extends BaseController{
     public function _initialize () {
         parent::_initialize();
-        $this->titleL1 = "思春微圈";
+        $this->titleL1 = "思青微圈";
     }
     /**
      * 列表
@@ -53,6 +53,36 @@ class MicroCircleController extends BaseController{
         $set = I('set', 0, 'intval'); 
         $set = $set ? $set : 0;
         echo M('MicroCircle')->where(['id' => $id])->setField('status', $set);
+    }
+
+    //编辑
+    public function edit() 
+    {
+      
+        $id = I('id', 0, 'intval');
+        if (!$id) $this->error('参数错误');
+        $this->titleL2 = "编辑";
+        $data = M('MicroCircle')->where(['id'=> $id])->find();
+        $this->data = $data;
+        $this->display();
+    }
+
+    //编辑数据处理
+    public function editHandle() 
+    {
+       
+        $model = M('MicroCircle');
+        $model->create();
+        if (I('create_at'))
+            $model->create_at = strtotime(I('create_at'));
+        $model->content = $_POST['content'];
+        if (!$model->title) $this->error('标题不能为空');
+        if (!$model->content) $this->error('内容不能为空');
+        if ($model->save()) {
+            $this->redirect('MicroCircle/index', array('p' => I('p')));
+        } else {
+            $this->error('内容未修改');
+        }
     }
 
 }

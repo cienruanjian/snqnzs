@@ -47,7 +47,7 @@
 
 <div id="mnmf00">
   <div id="mnmf001">
-       <div id="Timea" style="height:73px;"><p>思南风土人情，值得一看！</p></div>
+       <div id="Timea" style="height:73px;"><p><?php echo ($data["title"]); ?></p></div>
        <div id="tgk">
           <p><?php echo ((isset($data["nickname"]) && ($data["nickname"] !== ""))?($data["nickname"]):"匿名"); ?> &nbsp;&nbsp;&nbsp;发布时间 <?php echo (date("Y/m/d", $data["create_at"])); ?>&nbsp;&nbsp;&nbsp;点击数：<?php echo ($data["click"]); ?></p>
        </div>

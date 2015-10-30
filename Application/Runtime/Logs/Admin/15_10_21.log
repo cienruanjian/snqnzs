@@ -1,0 +1,614 @@
+[ 2015-10-21T22:57:31+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+
+[ 2015-10-21T22:57:31+08:00 ] 127.0.0.1 /Admin/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000170s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000027s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000067s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007134s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007174s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000411s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000498s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000527s ]
+
+[ 2015-10-21T22:57:31+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000219s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000245s ]
+
+[ 2015-10-21T22:57:31+08:00 ] 127.0.0.1 /Admin/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000403s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005569s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005617s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000171s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000426s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000462s ]
+
+[ 2015-10-21T22:57:37+08:00 ] 127.0.0.1 /Admin/Login/handle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000219s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000246s ]
+SQL: SHOW COLUMNS FROM `cns_admin` [ RunTime:0.0455s ]
+SQL: SELECT * FROM `cns_admin` WHERE `login` = 'cns' LIMIT 1   [ RunTime:0.0414s ]
+SQL: UPDATE `cns_admin` SET `last_login_time`='1445439457',`last_login_ip`='2130706433' WHERE `id` = 1 [ RunTime:0.0422s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000369s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000403s ]
+
+[ 2015-10-21T22:57:37+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000241s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000269s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000071s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007798s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007831s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000327s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000358s ]
+
+[ 2015-10-21T22:57:46+08:00 ] 127.0.0.1 /Admin/AdManage/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000235s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000266s ]
+SQL: SHOW COLUMNS FROM `cns_ad` [ RunTime:0.0462s ]
+SQL: SELECT * FROM `cns_ad` WHERE `number` = 1 ORDER BY sort asc, id desc  [ RunTime:0.0425s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+NOTIC: [8] Undefined index: number /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/4a8b52e30176ceeff6d39ca5ecf5eaae.php 第 190 行.
+NOTIC: [8] Undefined index: number /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/4a8b52e30176ceeff6d39ca5ecf5eaae.php 第 190 行.
+NOTIC: [8] Undefined index: number /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/4a8b52e30176ceeff6d39ca5ecf5eaae.php 第 201 行.
+NOTIC: [8] Use of undefined constant number - assumed 'number' /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/4a8b52e30176ceeff6d39ca5ecf5eaae.php 第 225 行.
+NOTIC: [8] Use of undefined constant number - assumed 'number' /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/4a8b52e30176ceeff6d39ca5ecf5eaae.php 第 226 行.
+NOTIC: [8] Use of undefined constant number - assumed 'number' /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/4a8b52e30176ceeff6d39ca5ecf5eaae.php 第 225 行.
+NOTIC: [8] Use of undefined constant number - assumed 'number' /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/4a8b52e30176ceeff6d39ca5ecf5eaae.php 第 226 行.
+NOTIC: [8] Use of undefined constant number - assumed 'number' /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/4a8b52e30176ceeff6d39ca5ecf5eaae.php 第 225 行.
+NOTIC: [8] Use of undefined constant number - assumed 'number' /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/4a8b52e30176ceeff6d39ca5ecf5eaae.php 第 226 行.
+NOTIC: [8] Use of undefined constant number - assumed 'number' /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/4a8b52e30176ceeff6d39ca5ecf5eaae.php 第 225 行.
+NOTIC: [8] Use of undefined constant number - assumed 'number' /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/4a8b52e30176ceeff6d39ca5ecf5eaae.php 第 226 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016601s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016637s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000101s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000409s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000445s ]
+
+[ 2015-10-21T22:57:49+08:00 ] 127.0.0.1 /Admin/AdManage/edit/number/1/id/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000339s ]
+SQL: SHOW COLUMNS FROM `cns_ad` [ RunTime:0.0499s ]
+SQL: SELECT * FROM `cns_ad` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0494s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019198s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019354s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001567s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001895s ]
+
+[ 2015-10-21T22:57:50+08:00 ] 127.0.0.1 /Admin/AdManage/edit/number/1/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000473s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000021s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000053s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004334s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004454s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000541s ]
+
+[ 2015-10-21T23:39:44+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000195s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000584s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000646s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000074s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010669s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010738s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000164s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000198s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000418s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000466s ]
+
+[ 2015-10-21T23:39:47+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000230s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000256s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009220s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009278s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000190s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000432s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000472s ]
+
+[ 2015-10-21T23:39:52+08:00 ] 127.0.0.1 /Admin/MicroCircle/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000237s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000266s ]
+SQL: SHOW COLUMNS FROM `cns_micro_circle` [ RunTime:0.0372s ]
+NOTIC: [8] Undefined variable: where /Users/yuwei/www/snqnzs/Application/Admin/Controller/MicroCircleController.class.php 第 19 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cns_micro_circle` LIMIT 1   [ RunTime:0.0351s ]
+NOTIC: [8] Undefined variable: where /Users/yuwei/www/snqnzs/Application/Admin/Controller/MicroCircleController.class.php 第 24 行.
+SQL: SELECT `id`,`title`,`nickname`,`create_at`,`email`,`status` FROM `cns_micro_circle` ORDER BY id desc LIMIT 0,15   [ RunTime:0.0355s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008832s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008877s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000409s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000457s ]
+
+[ 2015-10-21T23:40:53+08:00 ] 127.0.0.1 /Admin/MicroCircle/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000231s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000257s ]
+SQL: SHOW COLUMNS FROM `cns_micro_circle` [ RunTime:0.0431s ]
+NOTIC: [8] Undefined variable: where /Users/yuwei/www/snqnzs/Application/Admin/Controller/MicroCircleController.class.php 第 19 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cns_micro_circle` LIMIT 1   [ RunTime:0.0438s ]
+NOTIC: [8] Undefined variable: where /Users/yuwei/www/snqnzs/Application/Admin/Controller/MicroCircleController.class.php 第 24 行.
+SQL: SELECT `id`,`title`,`nickname`,`create_at`,`email`,`status` FROM `cns_micro_circle` ORDER BY id desc LIMIT 0,15   [ RunTime:0.0421s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008209s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008248s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000101s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000320s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000352s ]
+
+[ 2015-10-21T23:41:13+08:00 ] 127.0.0.1 /Admin/MicroCircle/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000297s ]
+SQL: SHOW COLUMNS FROM `cns_micro_circle` [ RunTime:0.0430s ]
+NOTIC: [8] Undefined variable: where /Users/yuwei/www/snqnzs/Application/Admin/Controller/MicroCircleController.class.php 第 19 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cns_micro_circle` LIMIT 1   [ RunTime:0.0418s ]
+NOTIC: [8] Undefined variable: where /Users/yuwei/www/snqnzs/Application/Admin/Controller/MicroCircleController.class.php 第 24 行.
+SQL: SELECT `id`,`title`,`nickname`,`create_at`,`email`,`status` FROM `cns_micro_circle` ORDER BY id desc LIMIT 0,15   [ RunTime:0.0426s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009414s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009457s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000118s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000356s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000386s ]
+
+[ 2015-10-21T23:42:32+08:00 ] 127.0.0.1 /Admin/MicroCircle/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000203s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000282s ]
+SQL: SHOW COLUMNS FROM `cns_micro_circle` [ RunTime:0.0486s ]
+NOTIC: [8] Undefined variable: where /Users/yuwei/www/snqnzs/Application/Admin/Controller/MicroCircleController.class.php 第 19 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cns_micro_circle` LIMIT 1   [ RunTime:0.0475s ]
+NOTIC: [8] Undefined variable: where /Users/yuwei/www/snqnzs/Application/Admin/Controller/MicroCircleController.class.php 第 24 行.
+SQL: SELECT `id`,`title`,`nickname`,`create_at`,`email`,`status` FROM `cns_micro_circle` ORDER BY id desc LIMIT 0,15   [ RunTime:0.0478s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010788s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010829s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000393s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000428s ]
+
+[ 2015-10-21T23:44:48+08:00 ] 127.0.0.1 /Admin/MicroCircle/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000288s ]
+SQL: SHOW COLUMNS FROM `cns_micro_circle` [ RunTime:0.0487s ]
+NOTIC: [8] Undefined variable: where /Users/yuwei/www/snqnzs/Application/Admin/Controller/MicroCircleController.class.php 第 19 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cns_micro_circle` LIMIT 1   [ RunTime:0.0467s ]
+NOTIC: [8] Undefined variable: where /Users/yuwei/www/snqnzs/Application/Admin/Controller/MicroCircleController.class.php 第 24 行.
+SQL: SELECT `id`,`title`,`nickname`,`create_at`,`email`,`status` FROM `cns_micro_circle` ORDER BY id desc LIMIT 0,15   [ RunTime:60.1747s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019319s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019359s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000644s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000676s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000719s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000772s ]
+
+[ 2015-10-21T23:45:50+08:00 ] 127.0.0.1 /Admin/MicroCircle/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000300s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000404s ]
+SQL: SHOW COLUMNS FROM `cns_micro_circle` [ RunTime:0.0421s ]
+NOTIC: [8] Undefined variable: where /Users/yuwei/www/snqnzs/Application/Admin/Controller/MicroCircleController.class.php 第 19 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cns_micro_circle` LIMIT 1   [ RunTime:0.0406s ]
+NOTIC: [8] Undefined variable: where /Users/yuwei/www/snqnzs/Application/Admin/Controller/MicroCircleController.class.php 第 24 行.
+SQL: SELECT `id`,`title`,`nickname`,`create_at`,`email`,`status` FROM `cns_micro_circle` ORDER BY id desc LIMIT 0,15   [ RunTime:0.0417s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017588s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017622s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000516s ]
+
+[ 2015-10-21T23:45:56+08:00 ] 127.0.0.1 /Admin/MicroCircle/edit/id/25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+SQL: SHOW COLUMNS FROM `cns_micro_circle` [ RunTime:0.0361s ]
+SQL: SELECT * FROM `cns_micro_circle` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0353s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007060s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007191s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001966s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002178s ]
+
+[ 2015-10-21T23:46:00+08:00 ] 127.0.0.1 /Admin/MicroCircle/edit/id/25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000195s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+SQL: SHOW COLUMNS FROM `cns_micro_circle` [ RunTime:0.0421s ]
+SQL: SELECT * FROM `cns_micro_circle` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0420s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000022s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000061s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004524s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004675s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000607s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000659s ]
+
+[ 2015-10-21T23:47:09+08:00 ] 127.0.0.1 /Admin/MicroCircle/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000219s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000245s ]
+SQL: SHOW COLUMNS FROM `cns_micro_circle` [ RunTime:0.0480s ]
+NOTIC: [8] Undefined variable: where /Users/yuwei/www/snqnzs/Application/Admin/Controller/MicroCircleController.class.php 第 19 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cns_micro_circle` LIMIT 1   [ RunTime:0.0474s ]
+NOTIC: [8] Undefined variable: where /Users/yuwei/www/snqnzs/Application/Admin/Controller/MicroCircleController.class.php 第 24 行.
+SQL: SELECT `id`,`title`,`nickname`,`create_at`,`email`,`status` FROM `cns_micro_circle` ORDER BY id desc LIMIT 0,15   [ RunTime:0.0478s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010961s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011028s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000205s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000377s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000408s ]
+
+[ 2015-10-21T23:47:13+08:00 ] 127.0.0.1 /Admin/MicroCircle/detail/id/25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000410s ]
+SQL: SHOW COLUMNS FROM `cns_micro_circle` [ RunTime:0.0431s ]
+SQL: SELECT `content` FROM `cns_micro_circle` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0412s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000021s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000059s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007461s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007510s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000448s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000507s ]
+
+[ 2015-10-21T23:47:19+08:00 ] 127.0.0.1 /Admin/MicroCircle/edit/id/25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+SQL: SHOW COLUMNS FROM `cns_micro_circle` [ RunTime:0.0486s ]
+SQL: SELECT * FROM `cns_micro_circle` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0480s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000023s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000063s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003181s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003215s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000283s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000309s ]
+
+[ 2015-10-21T23:47:32+08:00 ] 127.0.0.1 /Admin/MicroCircle/edit/id/25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000176s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000226s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000253s ]
+SQL: SHOW COLUMNS FROM `cns_micro_circle` [ RunTime:0.0427s ]
+SQL: SELECT * FROM `cns_micro_circle` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0424s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+NOTIC: [8] Undefined index: desc /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/aef9790346befee001bbf1a282920095.php 第 210 行.
+NOTIC: [8] Undefined index: thumb /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/aef9790346befee001bbf1a282920095.php 第 218 行.
+NOTIC: [8] Undefined variable: size /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/aef9790346befee001bbf1a282920095.php 第 222 行.
+NOTIC: [8] Undefined variable: size /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/aef9790346befee001bbf1a282920095.php 第 222 行.
+NOTIC: [8] Undefined index: hot /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/aef9790346befee001bbf1a282920095.php 第 237 行.
+NOTIC: [8] Undefined index: editor /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/aef9790346befee001bbf1a282920095.php 第 246 行.
+NOTIC: [8] Undefined index: sort /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/aef9790346befee001bbf1a282920095.php 第 253 行.
+NOTIC: [8] Undefined index: from /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/aef9790346befee001bbf1a282920095.php 第 259 行.
+NOTIC: [8] Undefined index: thumb /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/aef9790346befee001bbf1a282920095.php 第 277 行.
+NOTIC: [8] Undefined index: type /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/aef9790346befee001bbf1a282920095.php 第 279 行.
+NOTIC: [8] Undefined index: type /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/aef9790346befee001bbf1a282920095.php 第 323 行.
+NOTIC: [8] Undefined index: type /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/aef9790346befee001bbf1a282920095.php 第 323 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008724s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008763s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000331s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000367s ]
+
+[ 2015-10-21T23:47:34+08:00 ] 127.0.0.1 /Admin/MicroCircle/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004854s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004910s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000165s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000204s ]
+
+[ 2015-10-21T23:49:27+08:00 ] 127.0.0.1 /Admin/MicroCircle/edit/id/25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000174s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000224s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000252s ]
+SQL: SHOW COLUMNS FROM `cns_micro_circle` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `cns_micro_circle` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0440s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+NOTIC: [8] Undefined index: thumb /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/aef9790346befee001bbf1a282920095.php 第 236 行.
+NOTIC: [8] Undefined index: type /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/aef9790346befee001bbf1a282920095.php 第 238 行.
+NOTIC: [8] Undefined index: type /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/aef9790346befee001bbf1a282920095.php 第 282 行.
+NOTIC: [8] Undefined index: type /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/aef9790346befee001bbf1a282920095.php 第 282 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007756s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007786s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000355s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000395s ]
+
+[ 2015-10-21T23:49:46+08:00 ] 127.0.0.1 /Admin/MicroCircle/edit/id/25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+SQL: SHOW COLUMNS FROM `cns_micro_circle` [ RunTime:0.0358s ]
+SQL: SELECT * FROM `cns_micro_circle` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0355s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] Undefined index: thumb /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/aef9790346befee001bbf1a282920095.php 第 234 行.
+NOTIC: [8] Undefined index: type /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/aef9790346befee001bbf1a282920095.php 第 236 行.
+NOTIC: [8] Undefined index: type /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/aef9790346befee001bbf1a282920095.php 第 280 行.
+NOTIC: [8] Undefined index: type /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/aef9790346befee001bbf1a282920095.php 第 280 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006721s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006750s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000103s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000343s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000383s ]
+
+[ 2015-10-21T23:50:35+08:00 ] 127.0.0.1 /Admin/MicroCircle/edit/id/25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000259s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000288s ]
+SQL: SHOW COLUMNS FROM `cns_micro_circle` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `cns_micro_circle` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0371s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+NOTIC: [8] Undefined index: type /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/aef9790346befee001bbf1a282920095.php 第 279 行.
+NOTIC: [8] Undefined index: type /Users/yuwei/www/snqnzs/Application/Runtime/Cache/Admin/aef9790346befee001bbf1a282920095.php 第 279 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019347s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019540s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001348s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003723s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004448s ]
+
+[ 2015-10-21T23:51:53+08:00 ] 127.0.0.1 /Admin/MicroCircle/edit/id/25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000226s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000252s ]
+SQL: SHOW COLUMNS FROM `cns_micro_circle` [ RunTime:0.0427s ]
+SQL: SELECT * FROM `cns_micro_circle` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0422s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000079s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008470s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008510s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000475s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000531s ]
+

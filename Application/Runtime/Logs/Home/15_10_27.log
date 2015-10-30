@@ -1,0 +1,125 @@
+[ 2015-10-27T13:25:20+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000773s ]
+SQL: SHOW COLUMNS FROM `cns_service` [ RunTime:0.0258s ]
+SQL: SELECT `id`,`name` FROM `cns_service` LIMIT 8   [ RunTime:0.0213s ]
+SQL: SHOW COLUMNS FROM `cns_ad` [ RunTime:0.0238s ]
+SQL: SELECT * FROM `cns_ad` WHERE `status` = 1 ORDER BY sort, id desc LIMIT 5   [ RunTime:0.0214s ]
+SQL: SHOW COLUMNS FROM `cns_article` [ RunTime:0.0231s ]
+SQL: SELECT `id`,`title` FROM `cns_article` WHERE `type` = 1 AND `status` = 1 ORDER BY hot desc, sort asc LIMIT 9   [ RunTime:0.0238s ]
+SQL: SHOW COLUMNS FROM `cns_micro_circle` [ RunTime:0.0220s ]
+SQL: SELECT `id`,`title` FROM `cns_micro_circle` WHERE `status` = 1 ORDER BY id desc LIMIT 13   [ RunTime:0.0348s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014696s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014756s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000538s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001119s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001165s ]
+
+[ 2015-10-27T13:25:20+08:00 ] 127.0.0.1 /Upload/ad/201510/thumb562792102c502.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+
+[ 2015-10-27T13:25:20+08:00 ] 127.0.0.1 /Upload/ad/201510/thumb56278eb6a2842.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+
+[ 2015-10-27T13:25:20+08:00 ] 127.0.0.1 /Upload/ad/201510/thumb56278f3eaf4ae.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+
+[ 2015-10-27T13:25:20+08:00 ] 127.0.0.1 /Upload/ad/201510/thumb562792d705933.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000288s ]
+
+[ 2015-10-27T13:25:20+08:00 ] 127.0.0.1 /Public/Home/images/wyfb.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+
+[ 2015-10-27T13:25:20+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+
+[ 2015-10-27T13:25:22+08:00 ] 127.0.0.1 /MicroCircle/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000176s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000274s ]
+SQL: SHOW COLUMNS FROM `cns_service` [ RunTime:0.0288s ]
+SQL: SELECT `id`,`name` FROM `cns_service` LIMIT 8   [ RunTime:0.0257s ]
+SQL: SHOW COLUMNS FROM `cns_micro_circle` [ RunTime:0.0288s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cns_micro_circle` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0256s ]
+SQL: SELECT `id`,`title`,`create_at` FROM `cns_micro_circle` WHERE `status` = 1 ORDER BY id desc LIMIT 0,15   [ RunTime:0.0270s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000074s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007620s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007665s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000304s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000329s ]
+
+[ 2015-10-27T13:25:26+08:00 ] 127.0.0.1 /MicroCircle/detail/id/22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000188s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000274s ]
+SQL: SHOW COLUMNS FROM `cns_service` [ RunTime:0.0270s ]
+SQL: SELECT `id`,`name` FROM `cns_service` LIMIT 8   [ RunTime:0.0279s ]
+SQL: SHOW COLUMNS FROM `cns_micro_circle` [ RunTime:0.0288s ]
+SQL: UPDATE `cns_micro_circle` SET `click`=click+1 WHERE `id` = 22 [ RunTime:0.0266s ]
+SQL: SELECT * FROM `cns_micro_circle` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0263s ]
+SQL: SHOW COLUMNS FROM `cns_comment` [ RunTime:0.0285s ]
+SQL: SELECT * FROM `cns_comment` WHERE `comment_for` = 22 ORDER BY id desc LIMIT 20   [ RunTime:0.0262s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016123s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016264s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000661s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000861s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000927s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001021s ]
+
+[ 2015-10-27T13:25:26+08:00 ] 127.0.0.1 /ueditor/php/upload/image/20151021/1445437846367141.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000796s ]
+
+[ 2015-10-27T13:25:26+08:00 ] 127.0.0.1 /ueditor/php/upload/image/20151021/1445437846299555.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000715s ]
+
+[ 2015-10-27T13:25:26+08:00 ] 127.0.0.1 /ueditor/php/upload/image/20151021/1445437846941679.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+

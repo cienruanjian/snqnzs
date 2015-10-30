@@ -30,6 +30,17 @@
 
     <script src="/Public/Admin/vendor/modernizr.js"></script>
 <!-- page special css plugin here -->
+<link rel="stylesheet" href="/Public/Plugin/uploadify/uploadify.css">
+<style type="text/css">
+	.uploadify-button {
+	    background-color: transparent;
+	    border: none;
+	    padding: 0;
+	}
+	.uploadify:hover .uploadify-button {
+	    background-color: transparent;
+	}
+</style>
 </head>
 <body>
     <div class="app">
@@ -118,7 +129,7 @@
                         <li <?php if((strtolower(CONTROLLER_NAME)) == "microcircle"): ?>class="active"<?php endif; ?>>
                             <a href="<?php echo U('MicroCircle/index');?>">
                                 <i class="fa fa-circle"></i>
-                                <span>思青微圈</span>
+                                <span>思春微圈</span>
                             </a>
                         </li>
 
@@ -178,71 +189,66 @@
                 </footer>
 
             </aside>
-            <section class="main-content">
-                <div class="content-wrap">
-                	<div class="row mg-b">
-                        <div class="col-xs-12">
-                            <section class="panel">
-                                <header class="panel-heading">
-                                    <?php echo ($titleL1); ?>
-                                </header>
-                                <div class="panel-body no-padding">
-                                    <div class="table-responsive">
-                                        <table id="table" class="table table-striped responsive" data-sortable="" data-sortable-initialized="true">
-                                            <thead>
-                                                <tr>
-                                                    <th>标题</th>
-                                                    <th>发布时间</th>
-                                                    <th>发布者</th>
-                                                    <th>邮箱</th>
-                                                    <th>状态</th>
-                                                    <th>操作</th>
-                                                    
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                            	<?php if(is_array($lists)): foreach($lists as $key=>$v): ?><tr>
-                                                        <td>
-                                                            <?php echo ($v["title"]); ?>
-                                                        </td>
-                                                        <td><?php echo (date("Y-m-d", $v["create_at"])); ?></td>
-                                                        <td><?php echo ($v["nickname"]); ?></td>
-                                                        <td><?php echo ($v["email"]); ?></td>
-                                                        <td>
-                                                        	<?php if($v['status'] == 0): ?><a href="javascript:;" data-id="<?php echo ($v["id"]); ?>" set="1" class="btn btn-xs btn-danger set-status">未审核</a>
-                                                        	<?php else: ?>
-                                                                <a href="javascript:;" data-id="<?php echo ($v["id"]); ?>" set="0" class="btn btn-xs btn-success btn-info set-status">已审核</a><?php endif; ?>
-                                                        </td>
-	                                                    <td>
-	                                                    	<a class="show-detail" href="javascript:;"  show-url="<?php echo U('MicroCircle/detail', ['id' => $v['id']]);?>" data-toggle="tooltip" data-placement="top" title="" data-original-title="查看详情"><span class="fa fa-eye text-success"></span></a>&nbsp;
-
-                                                            <a  href="<?php echo U('MicroCircle/edit', ['id' => $v['id']]);?>" data-toggle="tooltip" data-placement="top" title="" data-original-title="编辑"><span class="fa fa-edit text-success"></span></a>&nbsp;
-                                             			  	
-                                             			  	<a class="del" href="<?php echo U('MicroCircle/del', ['id' => $v['id']]);?>" data-toggle="tooltip" data-placement="top" title="" data-original-title="删除"><span class="fa fa-trash-o text-success"></span></a>
-
-	                                                    </td>
-	                                                </tr><?php endforeach; endif; ?>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </section>
-
-                             <!-- page -->
-                            <section class="panel bg-none">
-                                <div class="page">
-                                    <?php echo ($page); ?>
-                                </div>
-                                <div style="clear:both;"></div>
-                           </section>
-                            <!-- page-end -->
-                        </div>
-                    </div>
+        <section class="main-content">
+            <div class="content-wrap">
+                <div class="row">
+                	<div class="col-lg-12">
+                 	<section class="panel">
+                      <header class="panel-heading"><?php echo ($titleL2); ?></header>
+                      <div class="panel-body">
+                          <form class="form-horizontal bordered-group" role="form" action="<?php echo U('AdManage/editHandle');?>" method="post">
+                              
+                              <div class="form-group">
+                              	  
+                                  <label for="inputEmail3" class="col-sm-2 control-label"><span class="red">* </span>缩略图</label>
+                                  <div class="col-sm-2">
+                                  	<img id="no-image" <?php if($data['thumb']): ?>src="/<?php echo ($data["thumb"]); ?>"<?php else: ?> src="/Public/Default/images/no_image.jpg"<?php endif; ?> >
+                                  </div>
+                                  <div class="col-sm-8" style="margin-top:15px;">
+                                      <input type="file" name="face" id="upload" />
+                                     <p class="help-block no-margin">图片格式：jpg、jpeg、gif、png; 参考尺寸（px）：<span style="color:red; font-size:14px;"><?php echo ($size[0]); ?> * <?php echo ($size[1]); ?></span></p>
+                                  </div>
+                              </div>
+                              
+                               <div class="form-group">
+                                  <label for="inputEmail3" class="col-sm-2 control-label">链接地址</label>
+                                  <div class="col-sm-8">
+                                      <input type="text" name="url" placeholder="http://" class="form-control" id="inputEmail3" value="<?php echo ($data["url"]); ?>">
+                                  </div>
+                              </div>
+                              
+                              <div class="form-group">
+                                  <label class="col-sm-2 control-label">描述</label>
+                                  <div class="col-sm-8">
+                                      <textarea name="desc" class="form-control" rows="2"><?php echo ($data["desc"]); ?></textarea>
+                                  </div>
+                              </div> 
+                             
+                              <div class="form-group">
+                                  <label for="inputEmail4" class="col-sm-2 control-label">排序</label>
+                                  <div class="col-sm-8">
+                                      <input type="text" class="form-control" name="sort" id="inputEmail4" value="<?php echo ($data["sort"]); ?>" placeholder="排序">
+                                  </div>
+                              </div>
+                              <input type="hidden" name="thumb" value="<?php echo ($data["thumb"]); ?>">
+                              <input type="hidden" name="number" value="<?php echo ($_GET['number']); ?>">
+                              <input type="hidden" name="id" value="<?php echo ($data["id"]); ?>">
+                              
+                              <div class="form-group">
+                                  <div class="col-sm-offset-2 col-sm-6">
+                                      <button type="submit" class="btn btn-success">保存</button>
+                                      <button type="button" class="btn btn-default" onclick="history.go(-1)">返回</button>
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                  </section>
+                 </div>
                 </div>
-            </section>
+            </div>
         </section>
-    </div>
-<!-- page special js plugin here -->
+    </section>
+</div>
 <script src="/Public/Admin/vendor/jquery-1.11.1.min.js"></script>
 <script src="/Public/Admin/bootstrap/js/bootstrap.js"></script>
 <script src="/Public/Admin/vendor/jquery.easing.min.js"></script>
@@ -260,28 +266,24 @@
 <script src="/Public/Admin/vendor/isotope/isotope.pkgd.min.js"></script>
 <script src="/Public/Admin/js/feed.js"></script>
 
-<script src="/Public/Admin/js/common.js"></script>  
+<script src="/Public/Admin/js/common.js"></script> 
+<!-- page special js plugin here -->
+<script type="text/javascript" src="/Public/Plugin/uploadify/jquery.uploadify.min.js"></script>
 <script type="text/javascript" src="/Public/Plugin/layer/layer.js"></script>
+<script type="text/javascript" src="/Public/Admin/js/init_uploadify.js"></script>
 <script>
-    $('.show-detail').click(function() {
-        var url = $(this).attr('show-url');
-        layer.open({
-            type: 2,
-            title: '预览',
-            shadeClose: true,
-            shade: 0.8,
-            maxmin: true,
-            area: ['70%', '60%'],
-            content: url
-        }); 
-    });
-    $('.set-status').click(function() {
-        var id = $(this).attr('data-id');
-        var set = $(this).attr('set');
-        $.post("<?php echo U('MicroCircle/check');?>", {id : id , set : set}, function() {
-            window.location.reload();
-        })
-    });
+  var sid = "<?php echo session_id();?>";
+  var url = "<?php echo U('Base/uploadImage');?>";
+  var number = "<?php echo ($_GET['number']); ?>" ? "<?php echo ($_GET['number']); ?>" : 1;
+  uploadImage(url, number, sid, "ad/");
+
+  $('form').submit(function () {
+    if ($('input[name=thumb]').val() == '') {
+      layer.msg('请先上传缩略图');
+      return false;
+    }
+  })
 </script>
+
 </body>
 </html>

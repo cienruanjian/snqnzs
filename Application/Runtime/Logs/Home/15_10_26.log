@@ -1,0 +1,270 @@
+[ 2015-10-26T17:22:45+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000608s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000848s ]
+SQL: SHOW COLUMNS FROM `cns_service` [ RunTime:0.0971s ]
+SQL: SELECT `id`,`name` FROM `cns_service` LIMIT 8   [ RunTime:0.0864s ]
+SQL: SHOW COLUMNS FROM `cns_ad` [ RunTime:0.0894s ]
+SQL: SELECT * FROM `cns_ad` WHERE `status` = 1 ORDER BY sort, id desc LIMIT 5   [ RunTime:0.0947s ]
+SQL: SHOW COLUMNS FROM `cns_article` [ RunTime:0.0971s ]
+SQL: SELECT `id`,`title` FROM `cns_article` WHERE `type` = 1 AND `status` = 1 ORDER BY hot desc, sort asc LIMIT 9   [ RunTime:0.1033s ]
+SQL: SHOW COLUMNS FROM `cns_micro_circle` [ RunTime:0.1125s ]
+SQL: SELECT `id`,`title` FROM `cns_micro_circle` WHERE `status` = 1 ORDER BY id desc LIMIT 13   [ RunTime:0.0990s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020493s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020588s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000758s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000926s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001009s ]
+
+[ 2015-10-26T17:22:45+08:00 ] 127.0.0.1 /Upload/ad/201510/thumb56278f3eaf4ae.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000808s ]
+
+[ 2015-10-26T17:22:45+08:00 ] 127.0.0.1 /Upload/ad/201510/thumb56278eb6a2842.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000776s ]
+
+[ 2015-10-26T17:22:45+08:00 ] 127.0.0.1 /Upload/ad/201510/thumb562792102c502.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+
+[ 2015-10-26T17:22:45+08:00 ] 127.0.0.1 /Upload/ad/201510/thumb562792d705933.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010460s ]
+
+[ 2015-10-26T17:22:45+08:00 ] 127.0.0.1 /Public/Home/images/wyfb.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+
+[ 2015-10-26T17:22:47+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000503s ]
+
+[ 2015-10-26T17:24:07+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000284s ]
+SQL: SHOW COLUMNS FROM `cns_service` [ RunTime:0.0733s ]
+SQL: SELECT `id`,`name` FROM `cns_service` LIMIT 8   [ RunTime:0.0750s ]
+SQL: SHOW COLUMNS FROM `cns_ad` [ RunTime:0.0725s ]
+SQL: SELECT * FROM `cns_ad` WHERE `status` = 1 ORDER BY sort, id desc LIMIT 5   [ RunTime:0.0750s ]
+SQL: SHOW COLUMNS FROM `cns_article` [ RunTime:0.0849s ]
+SQL: SELECT `id`,`title` FROM `cns_article` WHERE `type` = 1 AND `status` = 1 ORDER BY hot desc, sort asc LIMIT 9   [ RunTime:0.0747s ]
+SQL: SHOW COLUMNS FROM `cns_micro_circle` [ RunTime:0.1088s ]
+SQL: SELECT `id`,`title` FROM `cns_micro_circle` WHERE `status` = 1 ORDER BY id desc LIMIT 13   [ RunTime:0.0756s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011496s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011539s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000149s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000503s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000575s ]
+
+[ 2015-10-26T17:24:07+08:00 ] 127.0.0.1 /Upload/ad/201510/thumb56278eb6a2842.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+
+[ 2015-10-26T17:24:07+08:00 ] 127.0.0.1 /Upload/ad/201510/thumb56278f3eaf4ae.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+
+[ 2015-10-26T17:24:07+08:00 ] 127.0.0.1 /Upload/ad/201510/thumb562792102c502.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000837s ]
+
+[ 2015-10-26T17:24:07+08:00 ] 127.0.0.1 /Public/Home/images/wyfb.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+
+[ 2015-10-26T17:24:07+08:00 ] 127.0.0.1 /Upload/ad/201510/thumb562792d705933.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+
+[ 2015-10-26T17:24:21+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000195s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000239s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000268s ]
+SQL: SHOW COLUMNS FROM `cns_service` [ RunTime:0.0827s ]
+SQL: SELECT `id`,`name` FROM `cns_service` LIMIT 8   [ RunTime:0.0750s ]
+SQL: SHOW COLUMNS FROM `cns_ad` [ RunTime:0.0895s ]
+SQL: SELECT * FROM `cns_ad` WHERE `status` = 1 ORDER BY sort, id desc LIMIT 5   [ RunTime:0.0746s ]
+SQL: SHOW COLUMNS FROM `cns_article` [ RunTime:0.1227s ]
+SQL: SELECT `id`,`title` FROM `cns_article` WHERE `type` = 1 AND `status` = 1 ORDER BY hot desc, sort asc LIMIT 9   [ RunTime:0.0932s ]
+SQL: SHOW COLUMNS FROM `cns_micro_circle` [ RunTime:0.0776s ]
+SQL: SELECT `id`,`title` FROM `cns_micro_circle` WHERE `status` = 1 ORDER BY id desc LIMIT 13   [ RunTime:0.0759s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012816s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012860s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000486s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000535s ]
+
+[ 2015-10-26T17:24:21+08:00 ] 127.0.0.1 /Upload/ad/201510/thumb56278eb6a2842.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000389s ]
+
+[ 2015-10-26T17:24:21+08:00 ] 127.0.0.1 /Upload/ad/201510/thumb56278f3eaf4ae.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000313s ]
+
+[ 2015-10-26T17:24:21+08:00 ] 127.0.0.1 /Upload/ad/201510/thumb562792102c502.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+
+[ 2015-10-26T17:24:21+08:00 ] 127.0.0.1 /Upload/ad/201510/thumb562792d705933.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+
+[ 2015-10-26T17:24:21+08:00 ] 127.0.0.1 /Public/Home/images/wyfb.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+
+[ 2015-10-26T17:24:50+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000972s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001063s ]
+SQL: SHOW COLUMNS FROM `cns_service` [ RunTime:0.0518s ]
+SQL: SELECT `id`,`name` FROM `cns_service` LIMIT 8   [ RunTime:0.0513s ]
+SQL: SHOW COLUMNS FROM `cns_ad` [ RunTime:0.0523s ]
+SQL: SELECT * FROM `cns_ad` WHERE `status` = 1 ORDER BY sort, id desc LIMIT 5   [ RunTime:0.0513s ]
+SQL: SHOW COLUMNS FROM `cns_article` [ RunTime:0.0536s ]
+SQL: SELECT `id`,`title` FROM `cns_article` WHERE `type` = 1 AND `status` = 1 ORDER BY hot desc, sort asc LIMIT 9   [ RunTime:0.0540s ]
+SQL: SHOW COLUMNS FROM `cns_micro_circle` [ RunTime:0.0510s ]
+SQL: SELECT `id`,`title` FROM `cns_micro_circle` WHERE `status` = 1 ORDER BY id desc LIMIT 13   [ RunTime:0.0513s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010352s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010421s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000134s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000479s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000529s ]
+
+[ 2015-10-26T17:24:50+08:00 ] 127.0.0.1 /Upload/ad/201510/thumb56278eb6a2842.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004044s ]
+
+[ 2015-10-26T17:24:50+08:00 ] 127.0.0.1 /Upload/ad/201510/thumb56278f3eaf4ae.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+
+[ 2015-10-26T17:24:50+08:00 ] 127.0.0.1 /Upload/ad/201510/thumb562792102c502.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+
+[ 2015-10-26T17:24:50+08:00 ] 127.0.0.1 /Upload/ad/201510/thumb562792d705933.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000315s ]
+
+[ 2015-10-26T17:24:50+08:00 ] 127.0.0.1 /Public/Home/images/wyfb.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000778s ]
+
+[ 2015-10-26T17:25:29+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000378s ]
+SQL: SHOW COLUMNS FROM `cns_service` [ RunTime:0.0495s ]
+SQL: SELECT `id`,`name` FROM `cns_service` LIMIT 8   [ RunTime:0.0432s ]
+SQL: SHOW COLUMNS FROM `cns_ad` [ RunTime:0.0436s ]
+SQL: SELECT * FROM `cns_ad` WHERE `status` = 1 ORDER BY sort, id desc LIMIT 5   [ RunTime:0.0432s ]
+SQL: SHOW COLUMNS FROM `cns_article` [ RunTime:0.0456s ]
+SQL: SELECT `id`,`title` FROM `cns_article` WHERE `type` = 1 AND `status` = 1 ORDER BY hot desc, sort asc LIMIT 9   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `cns_micro_circle` [ RunTime:0.0448s ]
+SQL: SELECT `id`,`title` FROM `cns_micro_circle` WHERE `status` = 1 ORDER BY id desc LIMIT 13   [ RunTime:0.0425s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000072s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009248s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009281s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000376s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000407s ]
+
+[ 2015-10-26T17:25:29+08:00 ] 127.0.0.1 /Upload/ad/201510/thumb56278f3eaf4ae.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+
+[ 2015-10-26T17:25:29+08:00 ] 127.0.0.1 /Upload/ad/201510/thumb56278eb6a2842.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+
+[ 2015-10-26T17:25:29+08:00 ] 127.0.0.1 /Upload/ad/201510/thumb562792102c502.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000321s ]
+
+[ 2015-10-26T17:25:29+08:00 ] 127.0.0.1 /Upload/ad/201510/thumb562792d705933.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000755s ]
+
+[ 2015-10-26T17:25:29+08:00 ] 127.0.0.1 /Public/Home/images/wyfb.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+
